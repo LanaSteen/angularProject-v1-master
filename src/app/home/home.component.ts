@@ -36,7 +36,8 @@ import { Hotel } from '../models/hotels';
 import { CommonModule } from '@angular/common';
 import { HotelsService } from '../services/hotels.service';
 import { BookedRoomsComponent } from "../booked-rooms/booked-rooms.component";
-import { HotelCardComponent } from "../hotel-card/hotel-card.component";
+import { HotelCardComponent } from '../hotels/hotel-card/hotel-card.component';
+
 
 @Component({
   selector: 'app-home',

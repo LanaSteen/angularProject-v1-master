@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ErrorHandler } from '@angular/core';
-import { ErrorHandlerService } from '../services/error-handler.service';
+import { ErrorHandlerService } from '../../services/error-handler.service';
 
 @Component({
   selector: 'app-error-dialog',

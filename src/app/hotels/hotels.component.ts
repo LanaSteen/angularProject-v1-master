@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelsService } from '../services/hotels.service';
-import { ErrorDialogComponent } from "../error-dialog/error-dialog.component";
+import { ErrorDialogComponent } from '../components/error-dialog/error-dialog.component';
+
 
 @Component({
   selector: 'app-hotels',
