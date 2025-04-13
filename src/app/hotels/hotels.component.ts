@@ -5,9 +5,10 @@ import { ErrorDialogComponent } from '../components/error-dialog/error-dialog.co
 
 @Component({
   selector: 'app-hotels',
-  imports: [ErrorDialogComponent],
+  standalone: true,
   templateUrl: './hotels.component.html',
-  styleUrl: './hotels.component.scss'
+  styleUrl: './hotels.component.scss',
+  imports: [ErrorDialogComponent]
 })
 export class HotelsComponent {
   constructor( private httpHotel : HotelsService ){ }

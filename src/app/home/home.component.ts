@@ -35,14 +35,14 @@ import { Component } from '@angular/core';
 import { Hotel } from '../models/hotels';
 import { CommonModule } from '@angular/common';
 import { HotelsService } from '../services/hotels.service';
-import { BookedRoomsComponent } from "../booked-rooms/booked-rooms.component";
-import { HotelCardComponent } from '../hotels/hotel-card/hotel-card.component';
+import { HotelCardComponent } from '../hotel-card/hotel-card.component';
+import { ErrorDialogComponent } from "../components/error-dialog/error-dialog.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, BookedRoomsComponent, HotelCardComponent],
+  imports: [CommonModule, HotelCardComponent, ErrorDialogComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
