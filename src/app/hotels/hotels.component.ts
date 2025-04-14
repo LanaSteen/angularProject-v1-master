@@ -14,7 +14,7 @@ import { IframeComponent } from "../iframe/iframe.component";
   standalone: true,
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss',
-  imports: [ErrorDialogComponent, HotelCardComponent, CommonModule, FormsModule, HotelInCardComponent, IframeComponent]
+  imports: [ CommonModule, FormsModule, HotelInCardComponent, IframeComponent]
 })
 export class HotelsComponent {
 

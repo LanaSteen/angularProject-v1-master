@@ -12,7 +12,7 @@ export const routes: Routes = [
       },
 
       {
-            path:"Room",
+            path:"Room/:id",
             loadComponent:()=>import('./rooms/rooms.component').then(m => m.RoomsComponent)
       },
       {

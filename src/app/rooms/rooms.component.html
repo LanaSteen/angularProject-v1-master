@@ -1,3 +1,11 @@
 <p>rooms works!</p>
 
 
+<h2>{{ singleHotel?.name }}</h2>
+<p>{{ singleHotel?.address }}, {{ singleHotel?.city }}</p>
+
+<div *ngFor="let room of singleHotel?.rooms">
+  <h3>{{ room.name }}</h3>
+  <p>Price per night: {{ room.pricePerNight }}</p>
+  <p>Max guests: {{ room.maximumGuests }}</p>
+</div>
