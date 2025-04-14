@@ -1,9 +1,13 @@
+
 <main>
       <div class="Hotels">
-            <p>{{Hotels.name}}</p>
-            <h2>{{Hotels.city}}</h2>
             <div class="hotel-img">
                   <img [src]="Hotels.featuredImage" alt="{{ Hotels.name }} image" />
             </div>
+            <div class="hotel-text">
+                  <p>{{Hotels.name}}</p>
+            </div>
+
+            <!-- <button routerLink="/Hotels">Book Now</button> -->
       </div>
 </main>

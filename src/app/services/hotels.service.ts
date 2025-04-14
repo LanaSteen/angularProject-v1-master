@@ -9,7 +9,12 @@ export class HotelsService {
   constructor(private APPI : ApiService ) { }
 
   getAllHotels(){
-    return this.APPI.getAll('https://hotelbooking.stepprects.ge/api/Hotels/GetAll')
+    return this.APPI.getAll('https://hotelbooking.stepprojects.ge/api/Hotels/GetAll')
   }
+
+  // getHotelById(){
+  //   return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel' , id)
+  // }
+
 
 }

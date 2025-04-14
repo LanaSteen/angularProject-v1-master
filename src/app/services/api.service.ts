@@ -11,4 +11,8 @@ export class ApiService {
   getAll(url : string){
     return this.http.get(url)
   }
+
+  // getById(url : string , id : number){
+  //   return this.http.get(`${url} / ${id}`)
+  // }
 }

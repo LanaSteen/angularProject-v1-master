@@ -35,7 +35,7 @@ import { Component } from '@angular/core';
 import { Hotel } from '../models/hotels';
 import { CommonModule } from '@angular/common';
 import { HotelsService } from '../services/hotels.service';
-import { HotelCardComponent } from '../hotel-card/hotel-card.component';
+import { HotelCardComponent } from '../CARDS-HOTEL/hotel-card/hotel-card.component';
 import { ErrorDialogComponent } from "../components/error-dialog/error-dialog.component";
 
 

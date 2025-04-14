@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelsService } from '../services/hotels.service';
 import { ErrorDialogComponent } from '../components/error-dialog/error-dialog.component';
+import { HotelCardComponent } from "../CARDS-HOTEL/hotel-card/hotel-card.component";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Hotel } from '../models/hotels';
+import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card.component';
 
 
 @Component({
@@ -8,16 +13,23 @@ import { ErrorDialogComponent } from '../components/error-dialog/error-dialog.co
   standalone: true,
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss',
-  imports: [ErrorDialogComponent]
+  imports: [ErrorDialogComponent, HotelCardComponent, CommonModule, FormsModule, HotelInCardComponent]
 })
 export class HotelsComponent {
-  constructor( private httpHotel : HotelsService ){ }
 
-  ngOnInit(){
 
-    this.httpHotel.getAllHotels().subscribe((resp : any ) =>{
-      console.log(resp)
-    })
+  hotelsArr: Hotel[] = [];
+
+  constructor(private httpHotel: HotelsService) { }
+
+  ngOnInit() {
+    this.httpHotel.getAllHotels().subscribe((resp:any) => {
+      this.renderHotel(resp);
+    });
+  }
+
+  renderHotel(arr: Hotel[]) {
+    this.hotelsArr = arr;
   }
 
 }
