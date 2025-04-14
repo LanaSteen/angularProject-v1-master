@@ -1,27 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HotelsService } from '../services/hotels.service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-rooms',
   standalone: true,
-  imports: [RouterModule],
+  imports: [CommonModule],
   templateUrl: './rooms.component.html',
-  styleUrl: './rooms.component.scss'
+  styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent {
-constructor( private rout : ActivatedRoute , private  api : HotelsService ){
+export class RoomsComponent implements OnInit {
+  singleHotel: any;
+  
+  constructor(
+    private route: ActivatedRoute,
+    private api: HotelsService
+  ) {}
 
+  ngOnInit(): void {
+    // Check if route params contain the hotel id
+    this.route.params.subscribe(params => {
+      const hotelId = params['id'];
+      if (hotelId) {
+        console.log('Hotel ID:', hotelId); // Log ID for debugging
 
-  this.rout.params.subscribe(data => this.getSingleHotel(data['id']))
-}
-
-singleHotel : any
-
-
-getSingleHotel(id : number){
-    this.api.getHotelById(id).subscribe((resp:any) => {
-      this.singleHotel=resp.data
-    })
+        // Call API with the hotel ID
+        this.api.getHotelById(+hotelId).subscribe(
+          (response: any) => {
+            console.log('API Response:', response); // Log response
+            this.singleHotel = response.data;
+          },
+          (error) => {
+            console.error('API Error:', error); // Log error
+          }
+        );
+      } else {
+        console.error('No hotel ID found in route params.');
+      }
+    });
   }
 }
