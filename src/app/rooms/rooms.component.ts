@@ -23,9 +23,11 @@ singleHotel : any
 
 getSingleHotel(id : number){
     this.APPI.getHotelById(id).subscribe((resp:any) => {
-      this.singleHotel=resp.data
+      this.singleHotel=resp
       console.log(resp.data)
       console.log("user Info", JSON.stringify(this.singleHotel.data))
     })
   }
+
+
 }

@@ -14,7 +14,7 @@ export class HotelsService {
   }
 
   getHotelById(id : number){
-    return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel/1' , id)
+    return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel' , id)
   }
 
 
