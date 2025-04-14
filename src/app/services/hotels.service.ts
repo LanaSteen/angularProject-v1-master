@@ -12,9 +12,9 @@ export class HotelsService {
     return this.APPI.getAll('https://hotelbooking.stepprojects.ge/api/Hotels/GetAll')
   }
 
-  // getHotelById(){
-  //   return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel' , id)
-  // }
+  getHotelById(id : number){
+    return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel' , id)
+  }
 
 
 }

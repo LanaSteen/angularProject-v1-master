@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hotel } from '../../models/hotels';
+import { Hotel,} from '../../models/hotels';
 
 @Component({
   selector: 'app-hotel-in-card',
@@ -10,4 +10,5 @@ import { Hotel } from '../../models/hotels';
 })
 export class HotelInCardComponent {
   @Input() Hotels!: Hotel;
+
 }

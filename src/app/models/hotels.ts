@@ -1,36 +1,30 @@
 export class Hotel {
-      id?: number;              
-      name!: string;             
-      address!: string;          
-      city!: string;             
-      featuredImage!: string;    
-      rooms!: Room[];           
-}
-
-export class Room {
-      id?: number;               
-      name!: string;             
-      hotelId?: number;          
-      roomTypeId?: number;       
-      pricePerNight?: number;    
-      available : boolean | undefined      
-      maximumGuests?: number;    
-      bookedDates!: BookedDate[];
-      images!: RoomImage[];      
-}
-
-export class BookedDate {
-      id?: number;               
-      date!: string;             
-      roomId!: number;        
-}
-
-export class RoomImage {
-      id?: number;              
-      source!: string;           
-      roomId?: number;      
-}
-
+      id?: number;
+      name!: string;
+      address!: string;
+      city!: string;
+      featuredImage!: string;
+      rooms!: {
+        id: number;
+        name: string;
+        hotelId?: number;
+        roomTypeId?: number;
+        pricePerNight?: number;
+        available: boolean;
+        maximumGuests: number;
+        bookedDates: {
+          id?: number;
+          date: string;
+          roomId: number;
+        }
+        images: {
+          id?: number;
+          source: string;
+          roomId?: number;
+        }
+      }
+    }
+    
 
 
 

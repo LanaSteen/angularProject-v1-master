@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Hotel } from '../models/hotels';
 import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card.component';
+import { IframeComponent } from "../iframe/iframe.component";
 
 
 @Component({
@@ -13,7 +14,7 @@ import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card
   standalone: true,
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss',
-  imports: [ErrorDialogComponent, HotelCardComponent, CommonModule, FormsModule, HotelInCardComponent]
+  imports: [ErrorDialogComponent, HotelCardComponent, CommonModule, FormsModule, HotelInCardComponent, IframeComponent]
 })
 export class HotelsComponent {
 

@@ -12,7 +12,7 @@ export class ApiService {
     return this.http.get(url)
   }
 
-  // getById(url : string , id : number){
-  //   return this.http.get(`${url} / ${id}`)
-  // }
+  getById(url : string , id : number){
+    return this.http.get(`${url} / ${id}`)
+  }
 }
