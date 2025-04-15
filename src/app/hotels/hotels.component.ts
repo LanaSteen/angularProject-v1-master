@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { Hotel } from '../models/hotels';
 import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card.component';
 import { IframeComponent } from "../iframe/iframe.component";
+import { RouterModule } from '@angular/router';
+import { RoomByIdComponent } from "../CARDS-HOTEL/room-by-id/room-by-id.component";
 
 
 @Component({
@@ -14,7 +16,7 @@ import { IframeComponent } from "../iframe/iframe.component";
   standalone: true,
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss',
-  imports: [ CommonModule, FormsModule, HotelInCardComponent, IframeComponent]
+  imports: [CommonModule, FormsModule, HotelInCardComponent, IframeComponent, CommonModule, RouterModule]
 })
 export class HotelsComponent {
 
