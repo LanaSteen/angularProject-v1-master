@@ -15,5 +15,9 @@ export class ApiService {
   getById(url : string, id : number){
     return this.http.get(`${url}/${id}`)
   }
+
+  getAllRooms(url : string,){
+    return this.http.get(url)
+  }
   
 }

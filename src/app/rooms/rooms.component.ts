@@ -33,3 +33,6 @@ getSingleHotel(id : number){
 
 
 }
+
+
+//es daviwye dges da kodi naxe shenit ramdeni weria realur proektebshi esea 

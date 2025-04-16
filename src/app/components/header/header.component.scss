@@ -32,7 +32,6 @@ header {
       color: #f0a500;
     }
 
-    /* Responsive Styles */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -51,5 +50,10 @@ header {
         margin: 10px 0;
       }
     }
+
+    .img-l{
+      width: 100px;
+    }
+
 
     

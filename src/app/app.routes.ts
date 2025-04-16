@@ -22,5 +22,9 @@ export const routes: Routes = [
       {
             path:"Booked-rooms",
             loadComponent:()=>import('./booked-rooms/booked-rooms.component').then(m => m.BookedRoomsComponent)
+      },
+      {
+            path:"All-rooms",
+            loadComponent:() => import('./all-rooms/all-rooms.component').then(m => m.AllRoomsComponent)
       }
 ];
