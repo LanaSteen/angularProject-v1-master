@@ -8,7 +8,7 @@ import { Hotel } from '../models/hotels';
 import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card.component';
 import { IframeComponent } from "../iframe/iframe.component";
 import { RouterModule } from '@angular/router';
-import { RoomByIdComponent } from "../CARDS-HOTEL/room-by-id/room-by-id.component";
+
 
 
 @Component({
