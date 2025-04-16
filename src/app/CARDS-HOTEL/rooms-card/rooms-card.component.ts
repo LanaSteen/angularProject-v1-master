@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Room } from '../../models/rooms';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-rooms-card',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './rooms-card.component.html',
   styleUrl: './rooms-card.component.scss'
 })
 export class RoomsCardComponent {
-  Room: Room[] = []
 
-  
+@Input() Room!: Room;
+
+
 }

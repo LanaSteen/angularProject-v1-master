@@ -1,8 +1,8 @@
-<p>all-rooms works!</p>
-<main>
-      <div class="room-parent">
-            <div *ngFor="let Rooms of Room" class="room-card">
-                  <app-rooms-card  > </app-rooms-card>
+
+<article class="article-241">
+      <main>
+            <div class="room-parent">
+                  <app-rooms-card *ngFor="let Rooms of Room" [Room]="Rooms"></app-rooms-card>
             </div>
-      </div>
-</main>
+      </main>
+</article>
