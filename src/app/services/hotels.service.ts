@@ -21,5 +21,12 @@ export class HotelsService {
     return this.APPI.getAllRooms('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll')
   }
 
+  getRoomById( id : number) {
+
+    return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Rooms/GetRoom',id)
+
+
+  }
+
 
 }
