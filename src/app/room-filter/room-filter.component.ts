@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RoomFilter } from '../models/room-filter';
 import { HotelsService } from '../services/hotels.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Room } from '../models/rooms';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { RouterModule } from '@angular/router';
 })
 export class RoomFilterComponent {
 
-  filterRoomArr: RoomFilter[] = []
+  filterRoomArr: Room[] = []
 
   constructor(private httpFilterR: HotelsService) {  }
 
@@ -25,7 +26,11 @@ export class RoomFilterComponent {
     })
   }
 
-  renderRoomTypes(arr : RoomFilter[]){
+  renderRoomTypes(arr : Room[]){
     this.filterRoomArr = arr
   }
+
+  @Input() types!:Room 
+
 }
+
