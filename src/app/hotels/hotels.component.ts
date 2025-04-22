@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Hotel } from '../models/hotels';
 import { HotelInCardComponent } from '../CARDS-HOTEL/hotel-in-card/hotel-in-card.component';
-import { IframeComponent } from "../iframe/iframe.component";
+import { IframeComponent } from "../components/iframe/iframe.component";
 import { RouterModule } from '@angular/router';
 
 

@@ -22,10 +22,10 @@ export class HotelsService {
   }
 
   getRoomById( id : number) {
-
     return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Rooms/GetRoom',id)
-
-
+  }
+  getRoomTypes() {
+    
   }
 
 
