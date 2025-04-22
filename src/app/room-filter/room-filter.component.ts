@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Room } from '../models/rooms';
+import { FilterCard1Component } from "../CARDS-HOTEL/filter-card1/filter-card1.component";
 
 
 @Component({
   selector: 'app-room-filter',
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule, FilterCard1Component],
   templateUrl: './room-filter.component.html',
   styleUrl: './room-filter.component.scss'
 })
