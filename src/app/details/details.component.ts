@@ -14,8 +14,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class DetailsComponent {
   constructor( private rout : ActivatedRoute , private  APPI : HotelsService ){
-  
-  
     this.rout.params.subscribe(data => this.getSingleroom(data['id']))
   }
   @Input() room!:Room
