@@ -19,8 +19,8 @@ export class ApiService {
   getAllRooms(url : string,){
     return this.http.get(url)
   }
-  getRoomType(url : string){
-    return this.http.get(url)
+  getRoomType(url : string, id : number){
+    return this.http.get(`${url} / ${id}`)
   }
   
 }

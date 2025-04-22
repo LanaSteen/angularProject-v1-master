@@ -3,10 +3,11 @@ import { Room } from '../models/rooms';
 import { HotelsService } from '../services/hotels.service';
 import { CommonModule } from '@angular/common';
 import { RoomsCardComponent } from "../CARDS-HOTEL/rooms-card/rooms-card.component";
+import { RoomFilterComponent } from "../room-filter/room-filter.component";
 
 @Component({
   selector: 'app-all-rooms',
-  imports: [CommonModule, RoomsCardComponent],
+  imports: [CommonModule, RoomsCardComponent, RoomFilterComponent],
   templateUrl: './all-rooms.component.html',
   styleUrl: './all-rooms.component.scss'
 })
