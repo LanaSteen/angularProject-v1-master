@@ -18,7 +18,7 @@ export class RoomFilterComponent {
 
   constructor(private httpFilterR: HotelsService) {  }
 
-  ngOnInit(id : number){
+  ngOnInit(){
     this.httpFilterR.getRoomTypes().subscribe((resp:any) => {
       console.log(resp)
       this.renderRoomTypes(resp)
@@ -28,5 +28,4 @@ export class RoomFilterComponent {
   renderRoomTypes(arr : RoomFilter[]){
     this.filterRoomArr = arr
   }
-
 }
