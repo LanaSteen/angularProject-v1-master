@@ -1,10 +1,8 @@
-<p>room-filter works!</p>
-<h1>rwegwerngeru9b9eru</h1>
 
 
 <div class="crf">
       <div *ngFor="let filter of filterRoomArr">
-            <button class="filter">{{filter.name}}</button>
+            <button routerLink="/details/{{filter.name}}" class="filter">{{filter.name}}</button>
       </div>
 </div>
 

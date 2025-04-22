@@ -25,7 +25,7 @@ export class HotelsService {
     return this.APPI.getById('https://hotelbooking.stepprojects.ge/api/Rooms/GetRoom',id)
   }
   getRoomTypes(id : number) {
-    return this.APPI.getRoomType('https://hotelbooking.stepprojects.ge/api/Rooms/GetRoomTypes', id)
+    return this.APPI.getRoomType('https://hotelbooking.stepprojects.ge/api/Rooms/GetRoomTypes')
   }
 
 

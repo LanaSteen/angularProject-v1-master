@@ -29,8 +29,6 @@ export class DetailsComponent {
         console.log(resp)
       })
     }
-  
-  
   }
 
 
