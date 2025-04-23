@@ -26,4 +26,13 @@ export class AllRoomsComponent {
   renderRoom(arr: Room[]) {
     this.Room = arr;
   }
+   filterRoomList(type : any){
+   let  postObj ={
+     roomTypeId: type,
+   }
+   this.httpRoom.getRoomFilteredByTypes(postObj).subscribe((resp:any) => {
+    this.renderRoom(resp)
+
+   })
+  }
 }

@@ -22,5 +22,9 @@ export class ApiService {
   getRoomType(url : string, ){
     return this.http.get(url)
   }
+
+  getRoomFilteredByType(url : string, obj : any){
+    return this.http.post(url, obj)
+  }
   
 }

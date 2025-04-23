@@ -25,6 +25,11 @@ constructor( private rout : ActivatedRoute , private  APPI : HotelsService ){
 singleHotel : any = []
 
 
+
+filterRoomList(type: any) {
+  console.log("from parent", type); 
+}
+
 getSingleHotel(id : number){
     this.APPI.getHotelById(id).subscribe((resp:any) => {
       this.singleHotel=resp

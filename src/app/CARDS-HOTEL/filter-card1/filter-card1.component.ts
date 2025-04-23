@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-card1',
@@ -7,7 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './filter-card1.component.scss'
 })
 export class FilterCard1Component {
-
+  @Input() types!: any; 
+  @Output() filterType: EventEmitter<any> = new EventEmitter<any>();
   
+  ngOnInit() {
 
+  }
+  ngOnChanges() {
+    console.log(this.types)
+  }
+
+  filetrByType(typeId:any){
+    this.filterType.emit(typeId)
+  }
 }

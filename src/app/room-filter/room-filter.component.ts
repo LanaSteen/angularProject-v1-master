@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RoomFilter } from '../models/room-filter';
 import { HotelsService } from '../services/hotels.service';
 import { FormsModule } from '@angular/forms';
@@ -10,13 +10,15 @@ import { FilterCard1Component } from "../CARDS-HOTEL/filter-card1/filter-card1.c
 
 @Component({
   selector: 'app-room-filter',
+  standalone: true,
   imports: [FormsModule, CommonModule, RouterModule, FilterCard1Component],
   templateUrl: './room-filter.component.html',
   styleUrl: './room-filter.component.scss'
 })
 export class RoomFilterComponent {
 
-  filterRoomArr: Room[] = []
+  filterRoomArr: any[] = []
+  @Output() filterRoomL = new EventEmitter<any>()
 
   constructor(private httpFilterR: HotelsService) {  }
 
@@ -27,11 +29,17 @@ export class RoomFilterComponent {
     })
   }
 
-  renderRoomTypes(arr : Room[]){
+  renderRoomTypes(arr : any[]){
     this.filterRoomArr = arr
   }
 
-  @Input() types!:Room 
+  filterRooms(type : number){
+    this.filterRoomL.emit(type)
+    console.log("emited" , type)
+
+  }
+
+  // @Input() types!:Room 
 
 }
 
